@@ -18,18 +18,26 @@ for i in range(len(S)):
 print("you entered", left, "left and", right, "right brackets" )
 
 for i in range(howManyBrackets):
-    if S[0] == '(' and S[-1] == ')':
-        print("you started with ( and ended with )")
+    #if S[0] == '(' and S[-1] == ')':
+    if S[0] == ')' or S[-1] == '(':
+        print("you started with ) or ended with (")
+        print("bad maths - no go.")
+        break
+        #print("you started with ( and ended with )")
+    if S[1] == ')' and S[2] == ')':
+        print("Dude - you started with ()) - that can't run")
+        print("off too a bad start - not maths")
+        break
     if S[i] == '(':
         counter = counter + 1
-        print(counter)
+        #print(counter)
     else:
         counter = counter - 1
-        print(counter)
-if counter == 0:
-    print("yes maths")
-else:
-    print("not maths")
+        #print(counter)
+    if counter == 0:
+        print("yes maths")
+    else:
+        print("not maths")
 
 '''
 If starts with a ( and ends with a )
