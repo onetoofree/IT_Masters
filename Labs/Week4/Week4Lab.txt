@@ -1,0 +1,81 @@
+1. Elementary exercises with lists.
+
+1.1. Please write a program whose input is a list A and whose output
+is an index of the smallest element of A. For instance if A=[8,4,3,6,9,9]
+the output should be 2. Notice that `an index' used rather than `the index'.
+This is because of possible multiple occurrences of the smallest element.
+For instance if A=[3,8,3,6,5] then both 0 and 2 are correct outputs.
+For instance you can choose to print the index of the first occurrence
+of the smallest element.
+
+1.2. Please write a program whose input is a list A and whose output
+is the second smallest element of A (the element itself, not its index). 
+For instance for  A=[8,4,3,6,9,9], the second smallest element is 4 and 
+for A=[3,8,3,6,5], the second smallest element is 3 (the same as the smallest
+one because of the double occurrence).
+
+1.3. Let us say that a list A is *sorted* if its elements are stored
+in the ascending order. For instance, A=[1,3,3,4,8,12] is sorted
+while A=[8,10,1,14,16]  is not because 10>1. 
+Please write a program whose input is a list A and whose output
+is `sorted' if A is sorted and `not sorted' otherwise.
+
+2. Reports printing
+The following two exercises are a little bit more `real-life-like'.
+Both programs hold two lists: Modules and Marks representing the list of
+modules studied by a student and respective marks.
+For instance if
+Modules=["Calculus1","Calculus2","Calculus3","Programming1","Programming2","Programming3"]
+and Marks=Marks=[50,80,35,70,62,15] then this means that the mark for Calculus1 is 50,
+the mark for Calculus2 is 80 and so on.
+To save time of typing these lists every time you run the programs, you can assume that
+these lists are initially assigned inside your programs, e.g. as above, and the programs will
+be applied on the initial content of these lists. Note, however that your program
+should work correctly for lists with any content, not just the one you have tested them on. 
+
+2.1. Please write a program that prints the modules and lists in a report like form
+`module  mark' per line. For instance, for the above lists the corresponding printout will be
+Calculus1 50
+Calculus2 80
+Calculus3 35
+Programming1 70
+Programming2 62
+Programming3 15
+
+2.2. Please write a program that will produce a report where modules are classifed according
+to the class of the received marks. In particular, the program should first print the lines
+for modules whose mark is first class (>=70) then modules with a 2:1 mark (60-69) then modules
+with a 2:2 mark (50-59), and then failed modules (mark<50). For instance, for the lists as above,
+the printout should something like the following.
+
+Modules with first class marks 
+Calculus2 80
+Programming1 70
+
+Modules with 2:1 marks
+Programming2 62
+
+Modules with 2:2 marks
+Calculus1 50
+
+Failed modules
+Calculus3 35
+Programming3 15
+
+3. More advanced string processing
+Remark1: these exercies are intended for more advanced Python programmers. In particular they will not be part of formal testing.
+Remark2: the use of lists for these exercises is not necessary (in particular, I have solved them without using lists) though please
+feel free to use them if you need.
+
+3.1. Please write a program whose input is a string S. The program should treat S as a sequence of numbers
+separated by non-digit symbols. The output of the program are the numbers extracted from S.
+For instance if S="fg123ab34fff45cv576" then the numbers printed should be
+123
+34
+45
+576
+
+3.2. Please write a program whose input is a string which is an arithmetical expression with operations `+' and `-'
+and without brackets. The program should evaluate the expression and print the result of the evaluation.
+For instance if S="5+8-7-5+1" then the output should be 2.
+   
